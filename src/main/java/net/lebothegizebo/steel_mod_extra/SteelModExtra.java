@@ -2,6 +2,8 @@ package net.lebothegizebo.steel_mod_extra;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.lebothegizebo.steel_mod_extra.item.ModItemGroups;
+import net.lebothegizebo.steel_mod_extra.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,8 +16,7 @@ public class SteelModExtra implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }
