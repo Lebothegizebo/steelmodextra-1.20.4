@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "steel_mod_extra",
+	"version": "${version}",
+	"name": "Steel Mod Beta",
+	"description": "Adds extra feautures, blocks and functionality to Steel Mod by Monolith, as well as tweaking recipes and removing redundant code (Mainly a testing site for new code to be merged into the main mod)",
+
+	"authors": [
+		"Lebothegizebo",
+		"Monolith"
+	],
+	"contact": {
+		"homepage": "https://leboandmono.com/",
+		"sources": "https://github.com/angularMono/Steel-and-Stuff"
+	},
+	"license": "MIT",
+	"icon": "assets/steel_mod_extra/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lebothegizebo.steel_mod_extra.SteelModExtra"
+		],
+		"client": [
+			"net.lebothegizebo.steel_mod_extra.SteelModExtraClient"
+		],
+		"fabric-datagen": [
+			"net.lebothegizebo.steel_mod_extra.SteelModExtraDataGenerator"
+		]
+	},
+	"mixins": [
+		"steel_mod_extra.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
